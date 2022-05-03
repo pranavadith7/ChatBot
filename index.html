@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body style="background-color: grey;">
+
+    <div class="chat-container"></div>
+  
+    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+    <script type="text/javascript">
+      var chatroom = new window.Chatroom({
+        host: "http://localhost:5005",
+        title: "Cab Booking ChatBot",
+        container: document.querySelector(".chat-container"),
+        welcomeMessage: "Hey there!. How may I help you?",
+        speechRecognition: "en-US",
+        // voiceLang: "en-US"
+      });
+      chatroom.openChat();
+    </script>
+  </body>
+
+<!-- 
+# This is the chatroom frontend. 
+python -m http.server
+# This is the Rasa backend.
+rasa run --enable-api --cors="*" -->
