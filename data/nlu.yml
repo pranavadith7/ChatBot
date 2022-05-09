@@ -1,0 +1,268 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_name
+  examples: |
+    - what's your name
+    - how i should call you
+    - how people call you
+
+- intent: my_name
+  examples: |
+    - my name is [akash]{"entity":"name","values":"akash"}
+    - my name is [pranav]{"entity":"name","values":"pranav"}
+    - my name is [shivani]{"entity":"name","values":"shivani"}
+    - my name is [sneha]{"entity":"name","values":"sneha"}
+    - my name is [aniket]{"entity":"name","values":"aniket"}
+    - my name is [bindu]{"entity":"name","values":"bindu"}
+    - my name is [padmavathi]{"entity":"name","values":"padmavathi"}
+    - [akash]{"entity":"name","values":"akash"}
+    - [adith]{"entity":"name","values":"adith"}
+    - [akash]{"entity":"name","values":"akash"} is my name
+
+- intent: my_location
+  examples: |
+    - I live in [delhi]{"entity":"location","values":"delhi"}
+    - I live in [amrita]{"entity":"location","values":"amrita"}
+    - I stay in [delhi]{"entity":"location","values":"delhi"}
+    - I stay in [coimbatore]{"entity":"location","values":"coimbatore"}
+    - I live in [chennai]{"entity":"location","values":"chennai"}
+    - I stay in [chennai]{"entity":"location","values":"chennai"}
+    - I am at [coimbatore railway station]{"entity":"location","values":"coibatore railway station"}
+    - I am at [delhi railway station]{"entity":"location","values":"delhi railway station"}
+    - I am at [coimbatore railway Airport]{"entity":"location","values":"coimbatore airport"}
+    - [delhi]{"entity":"location","values":"delhi"}
+    - i live in [delhi]{"entity":"location","values":"delhi"}
+    - i stay in [delhi]{"entity":"location","values":"delhi"}
+    - i am at [delhi airport]{"entity":"location","values":"delhi airport"}
+
+- intent: play_video
+  examples: |
+    - play this video
+    - play this mentioned video
+    - open the url
+    - open this link in the browser
+
+- intent: my_booking
+  examples: |
+    - i want to book a cab
+    - can you book a cab for me
+    - book a cab
+    - book cab for me
+    - मुझे कैब बुक करनी है
+
+- intent: my_destination
+  examples: |
+    - i want to go to [chennai airport]{"entity":"destination","values":"chennai airport"}
+    - i want to go to [coimbatore airport]{"entity":"destination","values":"coimbatore airport"}
+    - i want to go to [delhi airport]{"entity":"destination","values":"delhi airport"}
+    - i want to go to [chennai railway station]{"entity":"destination","values":"chennai railway station"}
+    - my destination place is [coimbatore]{"entity":"destination","values":"coimbatore"}
+    - my destination place is [chennai]{"entity":"destination","values":"chennai"}
+    - my destination place is [amrita]{"entity":"destination","values":"amrita"}
+    - my destination place is [airport]{"entity":"destination","values":"airport"}
+    - go to [chennai airport]{"entity":"destination","values":"chennai airport"}
+    - go to [coimbatore airport]{"entity":"destination","values":"coimbatore airport"}
+    - take me to [delhi airport]{"entity":"destination","values":"delhi airport"}
+    - take me to [chennai airport]{"entity":"destination","values":"chennai airport"}
+    - take me to [coimbatore airport]{"entity":"destination","values":"coimbatore airport"}
+    - i want to travel to [delhi airport]{"entity":"destination","values":"delhi airport"}
+    - i want to travel to [chennai airport]{"entity":"destination","values":"chennai airport"}
+    - i want to travel to [coimbatore airport]{"entity":"destination","values":"coimbatore airport"}
+
+- intent: my_car_type
+  examples: |
+    - i need [xuv]{"entity":"car_type","values":"xuv"}
+    - i need [sedan]{"entity":"car_type","values":"sedan"}
+    - i need [bike]{"entity":"car_type","values":"bike"}
+    - i need [mini]{"entity":"car_type","values":"mini"}
+    - [xuv]{"entity":"car_type","values":"xuv"}
+    - [sedan]{"entity":"car_type","values":"sedan"}
+    - [bike]{"entity":"car_type","values":"bike"}
+    - [mini]{"entity":"car_type","values":"mini"}
+
+- intent: my_total_people
+  examples: |
+    - we are [1]{"entity":"total_people","values":"1"}
+    - we are [2]{"entity":"total_people","values":"2"}
+    - we are [3]{"entity":"total_people","values":"3"}
+    - we are [4]{"entity":"total_people","values":"4"}
+    - we are [5]{"entity":"total_people","values":"5"}
+    - we are [6]{"entity":"total_people","values":"6"}
+    - we are [7]{"entity":"total_people","values":"7"}
+    - [7]{"entity":"total_people","values":"7"}
+    - [6]{"entity":"total_people","values":"6"}
+    - [5]{"entity":"total_people","values":"5"}
+    - [4]{"entity":"total_people","values":"4"}
+    - [3]{"entity":"total_people","values":"3"}
+    - [2]{"entity":"total_people","values":"2"}
+    - [1]{"entity":"total_people","values":"1"}
+
+
+- intent: my_date
+  examples: |
+    - i want to travel at [12-03-22]{"entity":"date","values":"12-03-22"}
+    - at [13-07-22]{"entity":"date","values":"13-07-22"}
+    - [16-12-22]{"entity":"date","values":"16-12-22"}
+
+- intent: my_time
+  examples: |
+    - at [9:00 am]{"entity":"time","values":"9:00 am"}
+    - at [12:00 pm]{"entity":"time","values":"12:00 pm"}
+    - [15:30]{"entity":"time","values":"15:30"}
+    - [10:40 am]{"entity":"time","values":"10:40 am"}
+    - at [10:00 pm]{"entity":"time","values":"10:00 pm"}
+
+- intent: my_details
+  examples: |
+    - can you show me my booking details
+    - show me details
+    - show me details of my booking
+    - booking details
+
+- intent: not_correct
+  examples: |
+    - no
+    - no this is not correct
+    - no it's not correct
+    - i want to change that
+    - wrong
+    - no this is wrong
+    - no it's wrong
+    - no it is not correct
+    - no this is wrong
+
+- intent: correct
+  examples: |
+    - yes
+    - yes it's correct
+    - yes they are correct
+    - yes this is correct
+    - हाँ, यह सही है
+    - हाँ
+    - यह सही है
+
+- intent: my_edit
+  examples: |
+    - name
+    - location
+    - destination
+    - car type
+    - total people
+    - date
+    - time
+
+- intent: my_cancel
+  examples: |
+    - I want to cancel my ride
+    - i want to cancel my booking
+    - i want to cancel my ride
+    - I want to cancel my booking
+    - cancel booking
+    - cancel my ride
+    - cancel my booking
+    - i don't want to book
+    - I don't want to book
+    - मैं अपनी बुकिंग रद्द करना चाहता हूं
+    - बुकिंग रद्द
+
+
+- intent: my_sure
+  examples: |
+    - yes i am sure
+    - yes,i am sure
+    - yes I am sure
+    - sure
+    - ज़रूर
+
+
+

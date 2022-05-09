@@ -1,0 +1,90 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: play video
+  steps:
+  - intent: play_video
+  - action: action_video
+
+- story: edit details
+  steps:
+  - action: utter_details_thanks
+  - intent: not_correct
+  - action: utter_edit_details
+  - intent: my_edit
+  - action: edit_details
+  - action: user_details_form
+  - active_loop: user_details_form
+
+- story: Cancel booking
+  steps:
+  - intent: my_cancel
+  - action: utter_confirm_cancel
+  - intent: my_sure
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: cancel_booking
+  - action: utter_cancel_success
+
+- story: confirm details
+  steps:
+  - action: utter_details_thanks
+  - intent: correct
+  - action: utter_thank
+
+- story: show details
+  steps:
+  - intent: my_details
+  - action: utter_details
+
+#- story: Bot name
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: ask_name
+#  - action: utter_name
+#  - action: utter_ask_name
+#  - intent: my_name
+#    entities:
+#    - name: "akash"
+#  - slot_was_set:
+#    - name: "akash"
+#  - action: utter_ask_location
+#  - intent: my_location
+#    entities:
+#    - location: "delhi"
+#  - slot_was_set:
+#    - location: "delhi"
+#  - action: utter_thank
+#  - action: utter_name
+#  - action: utter_location
